@@ -1,5 +1,5 @@
 # Site settings
-title: BING Blog
+title: Bin Blog
 SEOTitle: 志兵的博客 | BING blog
 header-img: img/home-bg.jpg
 email: 349039028@qq.com
@@ -34,7 +34,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
-#kramdown:
+kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 
