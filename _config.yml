@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: 349039028@qq.com
 description: "前端与设计 Web & Front-End Engineer，这里是李志兵的博客"
 keyword: "李志兵, zhibing, BING，李志兵的博客 博客, 个人网站, 互联网, 前端, 设计, 产品"
-url: "http://Tonnnylee.github.io"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+#url: "http://Tonnnylee.github.io"              # your host, for absolute URL
+baseurl: "/"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
