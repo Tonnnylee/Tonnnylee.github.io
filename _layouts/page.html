@@ -7,15 +7,12 @@ layout: default
     <div class="container">
         <div class="row">
             <div id="index-wrapper" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div id="index-heading" class="site-heading">
-                    <p class="index-intro">
-                        Programming<br/>
-                        <span>with</span><br/>
-                        designing<br/>
-                        and life       
-                    </p>
-                    <a id="intro-button" href="#mainbody" class="btn btn-default"><span class="fa fa-angle-down fa-lg"></span></a>
+               <div class="site-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">{{ page.description }}</span>
                 </div>
+                
             </div>
         </div>
     </div>
