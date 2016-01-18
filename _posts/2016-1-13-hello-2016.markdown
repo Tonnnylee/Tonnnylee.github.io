@@ -4,6 +4,7 @@ title:           "Hello 2016"
 subtitle:        "A new stage begin"
 author:          "BING"
 header-img:      "img/post-2016-begin.jpg"
+#categories: Life
 tags:
     - 生活
 ---

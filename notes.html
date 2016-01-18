@@ -1,0 +1,96 @@
+---
+title: Notes
+layout: default
+description: Notes of learning
+header-img: "img/note-bg.jpg"
+---
+
+<!--Page Header-->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Main Content -->
+<div class="container">
+	<div class="row">
+	      <!--Sidebar Container-->
+	    <div class="
+      col-lg-3 col-lg-offset-0
+      col-md-3 col-md-offset-0
+      col-sm-12
+      col-xs-12
+      sidebar-container
+      notes-container
+    ">
+    <!--Featured Notes-->
+    <!--added by BING-->
+    {% if site.featured-notes %}
+	    <section>
+	       <h5>NOTES TAGS</h5>
+	       <div class="tags">
+	       	{% for category in site.categories %}
+	       	   <a href="{{ site.baseurl }}/notes/#{{ category[0] }}"
+	       	    title="{{ category[0] }}" rel="{{ category[1].size }}">
+	       	     {{ category[0] }}
+	       	   </a>
+             <br>
+	       	{% endfor %}
+	       </div>
+	    </section> 
+	  {% endif %}
+      </div>
+	   <!--Note_content-->
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		<!--Notes preview-->
+		{% for category in site.categories %}
+		<div class="one-note-list">
+			<span class="fa fa-book listing-seperator" id="{{ category[0] }}">
+			   <span class="note-text">{{ category[0] }}</span>
+			</span>
+            {% for post in category[1] %}
+            <div class="post-preview">
+               <a href="{{ post.url | prepend: site.baseurl }}">
+                 <h2 class="post-title">
+                    {{ post.title }}
+                 </h2>
+                 {% if post.subtitle %}
+                 <h3 class="post-subtitle">
+                 	{{ post.subtitle }}
+                 </h3>
+                 {% endif %}
+               </a>
+            </div>  
+            <hr> 
+            {% endfor %}
+               
+		</div>
+	     {% endfor %}
+
+	   </div> 
+	</div>
+</div>
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Preview Page</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next Page &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
