@@ -9,6 +9,7 @@ tags:
     - OS
     - Unix
     - Linux
+post-permission: true
 ---
 
 > This document is not completed and will be updated anytime.

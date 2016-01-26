@@ -7,6 +7,7 @@ header-img:      "img/post-2016-begin.jpg"
 #categories: Life
 tags:
     - 生活
+post-permission: true
 ---
 
 > 好吧，2016年终于开通了自己的blog

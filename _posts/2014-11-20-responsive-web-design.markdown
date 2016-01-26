@@ -8,6 +8,7 @@ tags:
     - 知乎
     - 前端开发
     - 转载
+post-permission: true
 ---
 ## 这篇文章转载自[Hux blog](http://huangxuan.me)
 

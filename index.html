@@ -4,6 +4,7 @@ description: "Programming with designment and life"
 ---
 
 {% for post in paginator.posts %}
+  {% if post.post-permission %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -23,6 +24,7 @@ description: "Programming with designment and life"
     </p>
 </div>
 <hr>
+  {% endif %}
 {% endfor %}
 
 <!-- Pager -->
