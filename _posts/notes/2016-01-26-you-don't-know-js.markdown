@@ -33,7 +33,7 @@ foo(2);
 对 a 进行RHS引用
 
 作用域链：
-        ![词法作用域](/img/post-in/YDK-js-post-in.jpg)
+        ![词法作用域](/img/in-post/YDK-js-post-in.jpg)
 > LHS和RHS引用会在当前楼层进行查找
 > 如果没有找到，就会坐电梯前往上一层
 > 以此类推，直到找到则停止，到了全局作用域还没找到也停止
