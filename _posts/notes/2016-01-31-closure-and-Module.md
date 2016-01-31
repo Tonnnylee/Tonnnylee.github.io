@@ -60,7 +60,10 @@ function bar(){
 foo();
 bar();    //2
 ```
+
+
 ### 循环和闭包
+
 下列代码：
 ```
 for(var i =1; i<=5; i++){
@@ -93,11 +96,14 @@ for (let i =1; i<=5; i++){
         console.log(i);
     },i*1000);
 }
+
 ```
 
 ### JavaScript 模块
 模块模式是利用了闭包来实现的
-下例代码的实现，每次调用CoolModule()创建一个新的模块实例：  
+下例代码的实现，每次调用CoolModule()创建一个新的模块实例：
+  
+
 ```
 function CoolModule(){
     var someThing = "Cool";
@@ -117,12 +123,14 @@ function CoolModule(){
 var foo = CoolModule();  //调用CoolModule()
 foo.doSomething();  //Cool
 foo.doAnother();    //1!2!3
+
 ```
 模块模式需要具备两个必要条件。  
 1.必须有外部的封面函数，该函数必须被至少调用一次  
 2.封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。  
   
 从内部对模块实例进行修改：
+
 ```
 var foo = (function CoolModule(id){
     function change(){
@@ -144,6 +152,7 @@ var foo = (function CoolModule(id){
 foo.identify();   //foo module
 foo.change();
 goo.identify;     //FOO MODULE
+
 ```
 
 ### Continue...
