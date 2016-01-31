@@ -20,7 +20,7 @@ post-permission: false
 让我们一起揭开闭包和模块化的面纱
 
 ### 闭包
-下面直接，清晰地展示一下闭包
+下面直接，清晰地展示一下闭包  
 
 ```
 function foo(){
@@ -44,7 +44,8 @@ bar()本身在使用
    
      
       
-简介传递函数使用闭包
+简介传递函数使用闭包  
+
 ```
 var fn;
 function foo(){
@@ -96,7 +97,6 @@ for (let i =1; i<=5; i++){
         console.log(i);
     },i*1000);
 }
-
 ```
 
 ### JavaScript 模块
@@ -130,7 +130,6 @@ foo.doAnother();    //1!2!3
 2.封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。  
   
 从内部对模块实例进行修改：
-
 ```
 var foo = (function CoolModule(id){
     function change(){
@@ -152,7 +151,6 @@ var foo = (function CoolModule(id){
 foo.identify();   //foo module
 foo.change();
 goo.identify;     //FOO MODULE
-
 ```
 
 ### Continue...
