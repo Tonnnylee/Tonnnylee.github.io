@@ -63,3 +63,66 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+//chart.js begins
+//Line-chart for time
+var data1 = {
+    labels: ["Monday","Tuesday","wednesday","Thursday","Friday","saturday","sunday"],
+    datasets: [
+        {
+            fillColor : "rgba(151,187,205,0.5)",
+            strokeColor : "rgba(151,187,205,1)",
+            pointColor : "rgba(151,187,205,1)",
+            pointStrokeColor : "#fff",
+            data : [28,48,40,19,96,27,100]
+        }
+    ]
+}
+
+
+var ctx1 = document.getElementById("myChart1").getContext("2d");
+var myNewChart = new Chart(ctx1);
+myNewChart.Line(data1,{
+    responsive:true
+});
+
+//Pie-chart for features 
+
+var data2 = {
+    labels : ["Eating","Drinking","Sleeping","Designing","Coding","Partying","Running"],
+    datasets : [
+        {
+            fillColor : "rgba(151,187,205,0.5)",
+            strokeColor : "rgba(151,187,205,1)",
+            pointColor : "rgba(151,187,205,1)",
+            pointStrokeColor : "#fff",
+            data : [28,48,40,19,96,27,100]
+        }
+    ]
+}
+
+
+var ctx2 = document.getElementById("myChart2").getContext("2d");
+new Chart(ctx2).Radar(data2,{
+    responsive:true
+});
+
+//Bar-chart for weight
+
+var data3 = {
+    labels : ["January","February","March","April","May","June","July"],
+    datasets : [
+        {
+            fillColor : "rgba(151,187,205,0.5)",
+            strokeColor : "rgba(151,187,205,1)",
+            data : [28,48,40,19,96,27,100]
+        }
+    ]
+}
+
+var ctx3 = document.getElementById("myChart3").getContext("2d");
+new Chart(ctx3).Bar(data3,{
+    responsive:true
+});
+
+

@@ -60,7 +60,8 @@ function bar(){
 }
 foo();
 bar();    //2
-```
+```  
+
 
 
 ### 循环和闭包
@@ -80,6 +81,7 @@ setTimeout(..., 0);
   
   
 要想得到预期的效果，可以这样  
+
 ```
 for(var i=1; i<=5; i++){
     (function(j){
@@ -90,7 +92,8 @@ for(var i=1; i<=5; i++){
     })(i);
 }
 ```
-当ES6 有了<b>let</b>关键词之后我们可以这样:    
+当ES6 有了<b>let</b>关键词之后我们可以这样:  
+    
 ```
 for (let i =1; i<=5; i++){
     setTimeout (function timer(){
@@ -129,7 +132,8 @@ foo.doAnother();    //1!2!3
 1.必须有外部的封面函数，该函数必须被至少调用一次  
 2.封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。  
   
-从内部对模块实例进行修改：
+从内部对模块实例进行修改：  
+
 ```
 var foo = (function CoolModule(id){
     function change(){

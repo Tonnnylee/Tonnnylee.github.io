@@ -1,0 +1,61 @@
+---
+title: Exercise
+layout: default
+description: keep moving
+header-img: "img/exercise-bg.jpg"
+---
+
+<!--Page Header-->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="note-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Main Content -->
+<div class="container">
+	<div class="row">
+	    <!-- exercise-time -->
+		<div class="col-lg-7 col-md-7 exercise-container">
+		  <div class="ec_wrapper">
+			<h2>每周的运动时间</h2>
+			<p></p>
+		  </div>
+		</div>
+		<div class="col-lg-5 col-md-5 chart-container">
+		   <canvas id="myChart1" width="500" height="400"></canvas>
+		</div>
+        <!--end of exercise-time-->
+        <!-- feature exercise-->
+        <div class="col-lg-7 col-md-7 chart-container">
+		   <canvas id="myChart2" width="400" height="400"></canvas>
+		</div>
+		<div class="col-lg-5 col-md-5 exercise-container">
+			   <div class="ec_wrapper">
+				<h2>健身的部位</h2>
+				<p></p>
+			  </div>
+		</div>
+		<!-- end of feature-->
+		<!-- weight -->
+		<div class="col-lg-7 col-md-7 exercise-container">
+		      <div class="ec_wrapper">
+				<h2>体重变化</h2>
+				<p></p>
+			  </div>
+		</div>
+		<div class="col-lg-5 col-md-5 chart-container">
+			<canvas id="myChart3" width="500" height="400"></canvas>  
+		</div>
+	</div>
+</div>
+
+<!-- Chart.js-->
+<script src="{{ "/js/chart.min.js " | prepend: site.baseurl }}"></script>
