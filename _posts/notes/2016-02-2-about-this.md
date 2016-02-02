@@ -4,6 +4,7 @@ title:             "Javascript中this的绑定笔记"
 subtitle:          "You don't know JS 'this'"
 author:            "BING"
 header-img:        "img/YDK-js.jpg"
+categories:        Javascript
 tags:
    - NOTES
    
