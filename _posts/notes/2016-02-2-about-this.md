@@ -42,7 +42,8 @@ obj.foo();    //2
 注意：foo() 函数严格来说不属于obj对象
 ```
 隐式丢失就是被隐式绑定的函数会丢失绑定对象，也可以说它应用默认绑定，从而把this绑定到全局对象
-或者undefined上。
+或者undefined上。  
+
 ```
 fuction foo (){
     console.log(this.a);
@@ -59,7 +60,8 @@ bar();    //"oops,global"
 因为bar引用的是foo函数本身，bar()和foo()没有任何区别，关键是在引用之后调用的位置
 
 ### 显示绑定：
-思考下面的代码：
+思考下面的代码：  
+
 ```
 function foo(){
     console.log(this.a);
@@ -71,7 +73,8 @@ foo.call(obj);     //2
 ```
 call()和apply()方法的第一个参数是一个对象，它们会把这个对象绑定到this，接着再调用函数时指定这个this.  
 
-ES5中提供了内置的方法Function.prototype.bind,它的用法如下：
+ES5中提供了内置的方法Function.prototype.bind,它的用法如下：  
+
 ```
 function foo(something){
     console.log(this.a,something);
@@ -103,6 +106,7 @@ function foo(a){
 var bar = new foo(2);
 console.log(bar.a);   //2
 ```
+
 ### 优先级
 
 显示绑定 > 隐式绑定 > 默认绑定

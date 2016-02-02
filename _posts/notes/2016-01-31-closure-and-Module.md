@@ -66,7 +66,8 @@ bar();    //2
 
 ### 循环和闭包
 
-下列代码：
+下列代码：  
+
 ```
 for(var i =1; i<=5; i++){
     setTimeout( function timer(){
