@@ -57,7 +57,8 @@ console.log(a);       //2
                       所在作用域（全局作用域）
                     2.必须显示地通过函数名（foo()）调用才能运行
 
-代码改进：
+代码改进：   
+
 ```
 var a = 2;
 (function foo () {
@@ -72,20 +73,23 @@ var a = 2;
 
 ### 匿名和具名
 
-  比如：
+  比如：      
+  
 ```
          setTimeout( function(){
                   console.log("I waited 1 second");
                },1000 );
 ```
 以上的函数时回调匿名函数
-最佳实践是：始终给函数表达式命名：
+最佳实践是：始终给函数表达式命名：         
+
 ```
          setTimeout( function(){
                   console.log("I waited 1 second");
                },1000 );
 ```
-倒置代码的运行顺序。模式是UMD（Universal Module Definition）
+倒置代码的运行顺序。模式是UMD（Universal Module Definition）       
+
 ```
 var a = 2;
 (function IIFE (def){
@@ -97,11 +101,13 @@ var a = 2;
 });
 
 ```
-函数被当作参数传递进去 ——> IIFE函数调用def() 把window传递给def函数。
+函数被当作参数传递进去 ——> IIFE函数调用def() 把window传递给def函数。       
+
 
 ### 块作用域
   ES 6 引入了新的 <b>let</b> 关键字，提供了除了var以外的另一种变量声明方式。
-  let关键字可以将变量绑定到任意作用域中（通常是{...}内部）。
+  let关键字可以将变量绑定到任意作用域中（通常是{...}内部）。      
+  
 ```
   var foo = true;
   if (foo) {
@@ -116,7 +122,8 @@ var a = 2;
    }
    console.log(i);    //ReferenceError
 ```
-   实际操作过程是：
+   实际操作过程是：       
+   
 ```
    {
      let j;
@@ -125,6 +132,7 @@ var a = 2;
        console.log(i);
      }
    }
-```
+```    
+
 ### Continue...
    
