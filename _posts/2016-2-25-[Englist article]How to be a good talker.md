@@ -75,7 +75,7 @@ Let them describe it. They're the ones that know. Try asking them things like,"W
 Because then they might have to stop for a moment and think about it,and you're going to get a much more interesting response.
 
 ### Number four: Go with the flow.    
-That means thoughts will come into your mind and you need to let them go out of your mind.
+That means thoughts will come into your mind and you need to let them go out of your mind.       
 ### Number five: If you don't know,say that you don't know.        
 > Err on the side of caution.    
 > Talk should not be cheap.       
@@ -86,16 +86,16 @@ If they're talking about the trouble they're having at work, don't tell them abo
 
 <b>All experiences are individual.</b> and more importantly,it is not about you     
 
-Don't Like that:![21st-conversation](/img/in-post/21st-conversation.png)     
-
 ### Number seven: try not to repeat youself.      
-<b>Don't do that!</b>
+
+Don't Like that:![21st-conversation](/img/in-post/21st-conversation.png)        
+
 ### Number eight: Stay out of the weeds(废话).        
 People don't care about the years, the names, the dates, all those details. What they care about is you. They care about what you're like,what you have in common. So forget the details.Leave them out.     
 
 
-### Number nine: Listen.     
-![Listen](/img/in-post/HT-talk2.jpg)     
+### Number nine: Listen.       
+![Listen](/img/in-post/HT-talk2.jpg)        
 我不听我不听我不听！     
 
 > 程序媛：编译器！为什么我写的代码不通过。我检查了好多遍都没错，你是不是故意整我。负心汉， 愧我每天都和你玩，你就这么对我。55555555555555       
