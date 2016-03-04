@@ -15,7 +15,7 @@ post-permission: true
 
 > What is conversation?
 
-![conversation](../img/in-post/HT-talk3.png)
+![conversation](/img/in-post/HT-talk3.png)
 
  
 Last week, I watched a Ted talk video titled "How to be a Good talker to other?". It is a very thought-provoking issue for youngers in nowaday.     
@@ -86,7 +86,7 @@ If they're talking about the trouble they're having at work, don't tell them abo
 
 <b>All experiences are individual.</b> and more importantly,it is not about you     
 
-Don't Like that:![21st-conversation](../img/in-post/21st-conversation.png)     
+Don't Like that:![21st-conversation](/img/in-post/21st-conversation.png)     
 
 ### Number seven: try not to repeat youself.      
 <b>Don't do that!</b>
@@ -95,7 +95,7 @@ People don't care about the years, the names, the dates, all those details. What
 
 
 ### Number nine: Listen.     
-![Listen](../img/in-post/HT-talk2.jpg)     
+![Listen](/img/in-post/HT-talk2.jpg)     
 我不听我不听我不听！     
 
 > 程序媛：编译器！为什么我写的代码不通过。我检查了好多遍都没错，你是不是故意整我。负心汉， 愧我每天都和你玩，你就这么对我。55555555555555       
@@ -111,8 +111,8 @@ People don't care about the years, the names, the dates, all those details. What
 > 这是一个关于不听的悲惨故事。     
       
 ### Number ten: Be brief.    
-![berif](../img/in-post/berif.png)             
-![berif2](../img/in-post/berif2.png)                  
+![berif](/img/in-post/berif.png)             
+![berif2](/img/in-post/berif2.png)                  
     
 ## The END
       
