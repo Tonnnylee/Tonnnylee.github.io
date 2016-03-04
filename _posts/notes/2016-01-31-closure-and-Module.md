@@ -177,7 +177,8 @@ var module = (function(){
 })();
 ```
 上面的代码，外部代码无法读取内部count变量。module.count  //undefined    
-如果要为模块添加一个新的方法    
+如果要为模块添加一个新的方法         
+ 
 ```
 var module = (function (mod){
     mod.m3 = function () {
@@ -186,23 +187,27 @@ var module = (function (mod){
     return mod;
 })(module);
 ```
-模块的特点是独立性，模块内部最好不与程序的其他部分直接交互，如果要在模块内部调用全局变量，必须显示地将其他变量输入模块     
+模块的特点是独立性，模块内部最好不与程序的其他部分直接交互，如果要在模块内部调用全局变量，必须显示地将其他变量输入模块           
+
 ```
 var module = (function($,YAHOO)) {
     //...
 })(jQuery, YAHOO);
-```  
+```        
+
 上面的代码就是导入jQuery库和YUI库    
 
 ### 浅谈CommonJS     
 
 其实在浏览器端，有没模块也都不是很大的问题，但是在服务器端就一定要有模块
 node.js的模块系统是参照CommonJS规范实现的。在CommonJS中，有一个全局性方法require(),用于加载模块。    
-如果有一个数学模块math.js可以像下面那样加载，然后调用模块提供的方法     
+如果有一个数学模块math.js可以像下面那样加载，然后调用模块提供的方法         
+ 
 ```
 var math = require('math');
 math.add(2,3);  //5
-```
+```       
+
 第二行math.add(2,3),在第一行require('math')之后运行，因此必须等math.js加载完成，也就是说，如果加载时间很长，整个应用就会    
 停在那里等。    
 这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间，但是，对于浏览器，这却是    
@@ -215,12 +220,14 @@ math.add(2,3);  //5
 ```
 require([module], callback);
 ```     
-第一个参数[module],是一个数组，里面的成员就是要加载的模块，第二个参数callback，则使加载成功之后的回调函数    
+第一个参数[module],是一个数组，里面的成员就是要加载的模块，第二个参数callback，则使加载成功之后的回调函数         
+
 ```
 require(['math'], function(math){
     math.add(2, 3);
 });
-```
+```      
+
 AMD比较适合浏览器环境，require.js和curl.js实现了AMD规范    
 
 ### requireJS
@@ -244,21 +251,24 @@ data-main属性的作用是，指定网页程序的主模块。在上例中，�
 require(['moduleA', 'moduleB', 'moduleC'], function (moduleA, moduleB, moduleC){
     // some code here
 });
-```
+```     
+
 require()函数接受两个参数。第一个参数是一个数组，表示所有依赖的模块，上例就是['moduleA', 'moduleB', 'moduleC']，即主模块依赖这三个模块；第二个参数是一个回调函数，当前面指定的模块都加载成功后，它将被调用。加载的模块会以参数形式传入该函数，从而在回调函数内部就可以使用这些模块。   
 
 require()异步加载moduleA，moduleB和moduleC，浏览器不会失去响应；它指定的回调函数，只有前面的模块都加载成功后，才会运行，解决了依赖性的问题。    
 
-假定主模块依赖jQuery，underscore和backbone这三个模块，main.js就可以这么写：     
+假定主模块依赖jQuery，underscore和backbone这三个模块，main.js就可以这么写：       
+  
 ```
 require(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
     // some code here
 })
-```     
+```       
+
 require.js会先加载jQuery，underscore和backbone，然后再运行回调函数。主模块的代码就写在回调函数中     
 
 使用require.config()方法，我们可以对模块的加载行为进行自定义。require.config()就写在主模块(main.js)的头部。参数就是一个对象，     
-这个对象的paths属性指定各个模块的加载路劲。     
+这个对象的paths属性指定各个模块的加载路径。     
 
 ```
 require.config({
@@ -270,11 +280,13 @@ require.config({
         backbone: "lib/backbone.min"
     }
 });
-```   
+```       
+
 ### AMD模块的写法    
 require.js加载的模块，采用AMD规范，模块必须按照AMD规则来写。    
 具体来说，就是模块必须采用特定的define()函数来定义。如果一个模块不依赖其他模块，那么可以直接定义在define()函数之中。     
 假定一个math.js模块，那么它必须要这么写：       
+
 ```
 //math.js
 
@@ -305,10 +317,12 @@ define(['myLib'], function(myLib){
     };
 });
 //当require()函数加载上面这个模块的时候，就会先加载myLib.js文件。
-```
+```      
 
-underscore和backbone这两个库，都没有采用AMD规范编写。如果要加载它们的话，必须先定义它们的特征     
-```
+
+underscore和backbone这两个库，都没有采用AMD规范编写。如果要加载它们的话，必须先定义它们的特征      
+
+```  
 require.config({
     shim: {
         'underscore': {
@@ -321,8 +335,9 @@ require.config({
         }
     }
 });
-```
-### End! see you on next port
+```      
+
+### End! see you on next posts
 
  
 
