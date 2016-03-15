@@ -240,7 +240,7 @@ pre code{
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 3;
+	z-index: 1000;
 	.sans-serif;
 	.navbar-brand {
 		font-weight: 800;
@@ -267,8 +267,7 @@ pre code{
 				font-weight: 800;
 				letter-spacing: 1px;
 				// only highlight in mobile
-				&:active
-                
+				&:active           
 				{
 					background: rgba(0,0,0,0.12)
 				}
@@ -355,7 +354,7 @@ pre code{
 			.nav {
 				li {
 					a {
-                        color: #000;
+                        color: @gray-dark;
 					    padding: 20px 0;
                         margin:0 20px;  
                         //add hover animation By BING
@@ -396,10 +395,10 @@ pre code{
 			transform: translate3d(0, 100%, 0);
 		}
 	}
-    @media only screen and (max-480px){
+    @media only screen and (max-width:480px){
         .navbar-brand{
             .brand{
-                transform:scale(0.6);
+                transform:scale(0.5);
             }
         }
     } 

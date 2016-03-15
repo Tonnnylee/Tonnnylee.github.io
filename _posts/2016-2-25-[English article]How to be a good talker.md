@@ -1,6 +1,6 @@
 ---
 layout:           post
-title:           "[Englist review]How to be a good talker?"
+title:           "[English review]How to be a good talker?"
 subtitle:        "This is from Ted talk for reviewing"
 author:          "BING"
 header-img:      "img/207354.jpg"    
