@@ -3,24 +3,24 @@ layout:           post
 title:           "[算法]有关JavaScript数据结构与算法归纳笔记"
 subtitle:        "JavaScript Data Structures and Algorithms"
 author:          "BING"
-header-img:      "img/207354.jpg"    
-categories: Javascript
+header-img:      "img/Algorithms.jpg"    
+categories: JavaScript
 tags:
     - 算法
-    - Javascript
+    - JavaScript
 post-permission: true
 ---
 
 ## 前言    
 
  在任何编程语言里，数据结构与算法一直扮演着非常重要的角色，它们是决定一个软件产品性能的关键所在，尤其是在比较大的项目中更有所体现   
- JavaScript 也属于一门高级语言，也就是说Javascript底层或者说是原生已经实现了相当多的数据结构与算法，我们可以直接用来开发。但是   
- 我们仅仅只是使用已经帮我们封装好的数据结构与算法的话，并不能帮助JavaScript开发者更深层地学习到JavaScript这门语言，所以让我们来探讨一下    
- 一些数据结构与算法在JavaScript是如何表现的       
- 
+    JavaScript 也属于一门高级语言，也就是说Javascript底层或者说是原生已经实现了相当多的数据结构与算法，我们可以直接用来开发。但是   
+ 我们仅仅只是使用已经帮我们封装好的数据结构与算法的话，并不能帮助JavaScript开发者更深层地学习到JavaScript这门语言，     
+ 所以让我们来探讨一下一些数据结构与算法在JavaScript是如何表现的       
+           
  ## 内容来源   
  本博文的内容来源是根据——[学习JavaScript数据结构与算法](https://book.douban.com/subject/26639401/),有兴趣的同学可以观看本书![JS-data](/img/in-post/JS-data.jpg)      
- 
+        
  ## Catalog    
  1. [栈类](#stack)    
  2. [队列](#queue)    
@@ -30,11 +30,11 @@ post-permission: true
  6. [树](#tree)    
  7. [图](#graph)      
  8. [排序和搜索算法](#sort)   
- 
- <h4 id="stack"></h4>
+       
+ <h4 id="stack"></h4>       
  ## 栈类     
  让我们看下一个简单的栈类的数据结构实现      
- ```     
+ ```              
  function Stack() {
      var items = [];
      this.push = function(element){
@@ -63,8 +63,10 @@ post-permission: true
      };
  }
  
- ```    
- 上面的就是一个完整的栈类数据结构，我们可以使用它来写进制转换的算法，base就是你想要转换的基数，decNumber是你要转换的数           
+ ```      
+ 
+ 上面的就是一个完整的栈类数据结构，我们可以使用它来写进制转换的算法，base就是你想要转换的基数，decNumber是你要转换的数       
+         
  ```     
  function baseConverter(decNumber, base){
      var remStack = new Stack(),
@@ -90,12 +92,13 @@ post-permission: true
  console.log(baseConverter(100345, 2));    //输出110000111111110011
  console.log(baseConverter(100345, 8));    //输出303771    
  console.log(baseConverter(100345, 16));   //输出187F9     
- 
+      
  ```       
- 
- <h4 id="queue"></h4> 
+     
+ <h4 id="queue"></h4>      
 ## 队列     
-照例看看Queue类的完整实现：      
+照例看看Queue类的完整实现：       
+
 ```     
 function Queue(){
     var items = [];
@@ -121,9 +124,10 @@ function Queue(){
         console.log(items.toString());
     };
 }
-```    
+```      
 队列有很多种改版，其中一个修改版是优先队列，元素的添加和移除是基于优先级的，实现一个优先队列，有两种选项：设置优先级，然后      
-在正确的位置添加元素      
+在正确的位置添加元素       
+      
 ```     
 function PriorityQueue() {
     var items = [];
@@ -154,12 +158,12 @@ function PriorityQueue() {
     };
 }
 ```      
-
+      
  <h4 id="link"></h4>       
- 
+       
 ## 链表     
 单链表的源代码：     
-```      
+```          
 function LinkedList() {
     var Node = function(element){
         this.element = element;
@@ -285,7 +289,7 @@ function LinkedList() {
     }
 }
 ```    
-双向链表源代码：      
+双向链表源代码：        
 ```      
 function DoublyLinkedList() {
     var Node = function(element){
@@ -375,11 +379,13 @@ function DoublyLinkedList() {
          }
     }
 }
-```       
- <h4 id="dictionary"></h4>      
+```        
+ <h4 id="dictionary"></h4>       
+       
 ## 字典和散列表    
 在字典中，存储的是[键，值]对，其中键名是用来查询特定元素的 
-Dictionary部分代码实现      
+Dictionary部分代码实现       
+      
 ```        
 function Dictionary() {
     var items = {};
@@ -416,7 +422,8 @@ function Dictionary() {
 ```     
 
  <h4 id="hash"></h4>        
-## 散列表      
+       
+## 散列表       
 散列算法的作用是尽可能地在数据结构中找到一个值，它是以数组的方式呈现的，不像字典一样是用对象来存储数据，查找一个     
 值的时候，需要遍历整个数据结构来查找，所以存储多数据的情况下散列表比字典性能好      
 散列表的原理是：将键值中的每个字母的ASCLL值相加得到一个新的键，然后查找     
@@ -453,13 +460,14 @@ function HashTable() {
        }
    };
    
-} 
-```      
- <h4 id="tree"></h4>        
+}       
+```       
+<h4 id="tree"></h4>        
+     
 ## 树      
 二叉搜索树:结点的左子结点比结点小，右子结点比结点大     
 让我们创建一个BinarySearchTree类      
-```      
+```        
 function BinarySearchTree() {
     var Node = function(key){
         this.key = key;
@@ -616,14 +624,16 @@ function BinarySearchTree() {
     
 ```     
 稍后解析最难的移除部分     
+         
+<h4 id="graph"></h4>         
 
-<h4 id="graph"></h4>        
 ## 图    
 有许多数据结构可以表示图，这里我们可以用邻接表来表示图，它就像如下图所示：     
-![linjiebiao](/img/in-post/lingjiebiao.png)     
+![linjiebiao](/img/in-post/lingjiebiao.png)      
 
-照例，我们看看图的源代码:      
-```     
+照例，我们看看图的源代码:       
+     
+```        
 function Graph() {
     var vertices = [];
     var adjList = new Dictionary();   //我们这里有用到字典类 
@@ -653,7 +663,8 @@ function Graph() {
         return s;
     };
 }
-```      
+```        
+     
 有两种算法可以对图进行遍历：广度优先搜索和深度优先搜索，图遍历可以用来寻找特定的顶点或寻找两个顶点之间的路径，检查图是否连通，   
 检查图是否含有环等     
 深度优先搜索：使用的数据结构是——栈，通过将顶点存入栈中，顶点是沿着路径被探索的，存在新的相邻顶点就去访问      
@@ -665,7 +676,8 @@ function Graph() {
 * 黑色: 表示该顶点被访问过且被完全探索过     
 广度优先搜索算法是，从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像访问图的一层     
 广度优先搜索算法：      
-```      
+
+```         
 var initializeColor = function(){
     var color = [];
     for(var i=0; i<vertices.length; i++){
@@ -705,10 +717,12 @@ this.BFS = function(v){
             predecessors: pred
         };
 }
-```       
+```        
+     
 深度优先搜索算法：会从一个指定的顶点开始遍历图，沿着路径直到这条路径最后一个顶点被访问了，接着原路回退并探索下一条路径    
 它是先深度后广度地访问顶点    
-```     
+         
+```      
 var time =0;
 this.DFS = function() {
     var color = initializeColor(),
@@ -751,7 +765,7 @@ var DFSVisit = function(u, color, d, f, p){
     f[u] = ++time;
     console.log('explored '+ u);
 };   
-```      
+```           
 
  <h4 id="sort"></h4>     
 ## 排序与搜索算法 （working....）
