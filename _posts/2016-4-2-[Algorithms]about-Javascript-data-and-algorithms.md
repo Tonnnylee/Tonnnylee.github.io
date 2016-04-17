@@ -462,12 +462,16 @@ function HashTable() {
    
 }       
 ```       
+
+
 <h4 id="tree"></h4>        
      
 ## 树      
 二叉搜索树:结点的左子结点比结点小，右子结点比结点大     
 让我们创建一个BinarySearchTree类      
-```        
+
+
+```          
 function BinarySearchTree() {
     var Node = function(key){
         this.key = key;
@@ -623,6 +627,13 @@ function BinarySearchTree() {
 }
     
 ```     
+
+
+
+
+
+
+
 稍后解析最难的移除部分     
          
 <h4 id="graph"></h4>         
@@ -631,9 +642,9 @@ function BinarySearchTree() {
 有许多数据结构可以表示图，这里我们可以用邻接表来表示图，它就像如下图所示：     
 ![linjiebiao](/img/in-post/lingjiebiao.png)      
 
-照例，我们看看图的源代码:       
-     
-```        
+照例，我们看看图的源代码:        
+        
+```         
 function Graph() {
     var vertices = [];
     var adjList = new Dictionary();   //我们这里有用到字典类 
@@ -663,7 +674,7 @@ function Graph() {
         return s;
     };
 }
-```        
+```         
      
 有两种算法可以对图进行遍历：广度优先搜索和深度优先搜索，图遍历可以用来寻找特定的顶点或寻找两个顶点之间的路径，检查图是否连通，   
 检查图是否含有环等     
@@ -677,7 +688,7 @@ function Graph() {
 广度优先搜索算法是，从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像访问图的一层     
 广度优先搜索算法：      
 
-```         
+```          
 var initializeColor = function(){
     var color = [];
     for(var i=0; i<vertices.length; i++){
@@ -717,8 +728,8 @@ this.BFS = function(v){
             predecessors: pred
         };
 }
-```        
-     
+```         
+         
 深度优先搜索算法：会从一个指定的顶点开始遍历图，沿着路径直到这条路径最后一个顶点被访问了，接着原路回退并探索下一条路径    
 它是先深度后广度地访问顶点    
          
