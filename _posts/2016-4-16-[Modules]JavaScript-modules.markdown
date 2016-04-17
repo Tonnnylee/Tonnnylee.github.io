@@ -64,7 +64,9 @@ var app={};
 目前实施AMD规范最著名的是requireJS它主要解决的是CommonJS同步加载脚本不合适浏览器这个问题   
 同步加载是： 当我使用这个模块时应用才开始加载        
 它使用名为define()的函数来做模块定义：       
-```     
+    
+```       
+
 //dependency1,2 是这个模块需要的依赖。amd1,2是它们的api参数
 define(['dependency1','dependency2'], 
      //这个回调函数会在所有依赖模块加载进来时才执行    
