@@ -1,5 +1,5 @@
 # Site settings
-title: BING Blog
+title: BING Blog   
 SEOTitle: 志兵的博客 | BING blog
 header-img: img/home-bg.jpg
 email: 349039028@qq.com
@@ -75,7 +75,7 @@ featured-notes: true
 
 
 # Friends
- friends: [
+friends: [
      {
          title: "前端外刊评论",
          href: "http://lingyu.wang/"

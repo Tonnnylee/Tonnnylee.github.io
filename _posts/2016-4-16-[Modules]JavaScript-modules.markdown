@@ -64,9 +64,7 @@ var app={};
 目前实施AMD规范最著名的是requireJS它主要解决的是CommonJS同步加载脚本不合适浏览器这个问题   
 同步加载是： 当我使用这个模块时应用才开始加载        
 它使用名为define()的函数来做模块定义：       
-    
 ```       
-
 //dependency1,2 是这个模块需要的依赖。amd1,2是它们的api参数
 define(['dependency1','dependency2'], 
      //这个回调函数会在所有依赖模块加载进来时才执行    
@@ -92,8 +90,7 @@ require(['testResult'],
       results.test2;    //second dependency loaded correctly 
   }
 );
-```       
-       
+```        
 AMD的缺点：     
 1. 要求要为每个模块包裹额外的样板函数      
 2. 迫使将整个应用代码编译打包成一个文件（一个script标签）不然你就得在浏览器中异步加载每个模块，这实际上会严重拖慢脚本的加载和执行      
