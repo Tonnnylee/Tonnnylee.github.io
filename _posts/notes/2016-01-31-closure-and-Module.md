@@ -5,7 +5,7 @@ subtitle:          "You don't know JS 闭包与模块化"
 date:              2016-01-31
 author:            "BING"
 header-img:        "img/YDK-js.jpg"
-categories:        Javascript
+categories:        JavaScript
 tags:
   - NOTES
   

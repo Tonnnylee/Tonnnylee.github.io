@@ -19,6 +19,7 @@ post-permission: true
 ## JavaScript模块概念     
 在一个JavaScript应用中，各个JavaScript文件分别是各个模块，各个模块相互之间可以约定好通信接口，如果你在为一个模块进行修改时    
 不再需要知晓所有其他相关部件的内部实现。      
+
 > 模块化编程的另一个重要目标是提升模块在应用程序间的复用性        
 
 模块化的特点：
@@ -63,8 +64,9 @@ var app={};
 我们在使用发布消息做状态的模块时，个人资料模块也在加载中    
 目前实施AMD规范最著名的是requireJS它主要解决的是CommonJS同步加载脚本不合适浏览器这个问题   
 同步加载是： 当我使用这个模块时应用才开始加载        
-它使用名为define()的函数来做模块定义：       
-```       
+它使用名为define()的函数来做模块定义：     
+  
+```                 
 //dependency1,2 是这个模块需要的依赖。amd1,2是它们的api参数
 define(['dependency1','dependency2'], 
      //这个回调函数会在所有依赖模块加载进来时才执行    
@@ -90,14 +92,16 @@ require(['testResult'],
       results.test2;    //second dependency loaded correctly 
   }
 );
-```        
+```       
+        
 AMD的缺点：     
 1. 要求要为每个模块包裹额外的样板函数      
 2. 迫使将整个应用代码编译打包成一个文件（一个script标签）不然你就得在浏览器中异步加载每个模块，这实际上会严重拖慢脚本的加载和执行      
 3. 当模块或依赖非常多的时候，AMD方案会变得越来越不可行      
 
 ## CommonJS模块规范       
-> 此段来自JavaScript应用程序设计一书     
+> 此段来自JavaScript应用程序设计一书       
+
 在Node.js出现之前，早在20实际90年代，网景与微软就有尝试过把JavaScript运行环境搬迁至服务器，然而由于缺乏应用场景，实际效果并不怎么好，首到人们广泛关注     
 的服务端JavaScript运行环境是Rhino，但由于其性能问题以及略显笨重的实现方式，在它之上很难构建起大型Web应用程序     
 
@@ -117,6 +121,75 @@ var foo = function (){
 };       
 exports.foo = foo;      //暴露foo函数接口        
 ```       
+#### CommonJS代码示例         
+``` 
+//guestlistmodel.js   
+var api = {
+    load: function load(){
+        return [
+            'Jimi hendrix',
+            'Billie Holiday',
+            'Nina Simone',
+            'John Bonham',
+            'zhibingpro'
+        ]
+    }
+};     
+```     
+```     
+//guestlistview.js     
+
+//获取jQuery的引用
+var $ = require('jquery'),
+    checkedinClass = 'icon-check',
+    listClass = 'dropdown-menu',
+    guestClass = 'guest',
+    
+    toggleCheckedIn = function toggleCheckedIn(e) {
+        $(this).toggleClass(checkedinClass);
+    },
+    
+    $listView = $('<ol>', {
+        id: 'guestlist-view',
+        'class' : listClass
+    }).on('click', '.'+ guestClass, toggleCheckedIn),
+    
+    render = function render(guestlist){
+        
+        $listView.empty();
+        
+        guestlist.forEach(function(guest) {
+            $guest = $('<li class="' + guestClass + '">' + '<span class="name">' + guest + '</span></li>');
+        });
+        
+        return $listView;
+    },
+    
+    api = {
+        render: render
+    };
+    
+    module.exports = api;     
+```    
+```  
+//app.js    
+/**
+ * import guestlistmodel and guestlistView
+ * 
+ */
+
+var $ = require('jquery'),
+    guestlistModel = require('guestlistModel'),     //src
+    guestlistView = require('guestlistview'),
+    $container = $('#container');
+    
+    $(function init() {
+        var guestlistDate = guestlistModel.load();
+        var $guestlist = guestlistView.render(guestlistData);
+        $container.empty().append($guestlist);
+    });
+ 
+```  
 
 ## ES2015模块规范 （working）
 

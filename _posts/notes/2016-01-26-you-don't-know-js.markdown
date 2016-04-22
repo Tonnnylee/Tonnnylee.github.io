@@ -5,7 +5,7 @@ subtitle:    "关于JS作用域的笔记"
 date:        2016-01-26
 author:      "BING"
 header-img:  "img/YDK-js.jpg"
-categories:  Javascript
+categories:  JavaScript
 tags:
    - NOTES
   
